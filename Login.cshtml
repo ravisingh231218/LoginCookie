@@ -1,0 +1,28 @@
+﻿@using UserLogin.Models;
+@model loginSignUp
+
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="row d-flex align-items-center justify-content-center mt-lg-5">
+    <div class="col-md-3 card p-3">
+        <h2 class="text-center text-info">Login</h2>
+        <div class="text-center">
+            <a class="text-light btn btn-primary font-weight-bold" asp-action="AddUser" asp-controller="Account">Sign Up</a>
+        </div>
+        <form method="post" asp-action="Login">
+            <div class="form-group">
+                <label asp-for="Username"></label>
+                <input type="text" asp-for="Username" placeholder="Enter Username" class="form-control" autocomplete="off" />
+           </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input type="text" asp-for="Password" placeholder="Enter Password" class="form-control" autocomplete="off" />
+            </div>
+            <div class="form-group">               
+                <input type="submit" class="btn btn-block btn-primary mb-2" value="Log In"
+            </div>
+        </form>
+
+    </div>
+</div>
